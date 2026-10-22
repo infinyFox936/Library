@@ -33,6 +33,7 @@ void Library::give()
 {
     if(taken)
     {
+        taken = false;
         cout << "Given";
     }
     else {

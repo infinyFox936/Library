@@ -14,5 +14,5 @@ public:
     int year;
     std::string description;
 private:
-    bool taken = true;
+    bool taken = false;
 };
