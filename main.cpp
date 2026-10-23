@@ -21,7 +21,7 @@ int main()
         cout << endl;
         cout << "Options:" << endl;
         cout << "| a - list all books` names" << endl;
-        cout << "| A - list all books` details (working on it)" << endl;
+        cout << "| A - list all books` details" << endl;
         cout << "| n - new book" << endl;
         cout << "| t - take a book" << endl;
         cout << "| g - give a book" << endl;
@@ -45,8 +45,17 @@ int main()
                 break;
 
             case 'A':
-                cout << "Working on it, check github" << endl;
-                cout << "More featues probably coming but I`m not sure yet" << endl;
+                for(int i = 0; i < books.size(); i++)
+                {
+                    cout << "| " << books[i].name << endl;
+                    cout << "|- " << books[i].author << endl;
+                    cout << "|- " << books[i].year << endl;
+                    cout << "|- " << books[i].description << endl;
+                    //cout << "| " << books[i].name << endl;
+                    if(books[i].is_taken()) cout << "|- taken" << endl;
+                    else cout << "|- available" << endl;
+                    cout << endl;
+                }
                 break;
 
             case 'n':
